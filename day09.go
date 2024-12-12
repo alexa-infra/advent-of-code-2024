@@ -9,7 +9,7 @@ import (
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Scan()
-	data := scanner.Bytes()
+	data := []byte(scanner.Text())
 	data = append(data, '0')
 	type file struct {
 		id    int

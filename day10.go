@@ -10,7 +10,7 @@ func main() {
 	data := [][]byte{}
 	scanner := bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {
-		data = append(data, scanner.Bytes())
+		data = append(data, []byte(scanner.Text()))
 	}
 	type pair struct {
 		x, y int

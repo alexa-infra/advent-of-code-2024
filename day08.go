@@ -21,7 +21,7 @@ func main() {
 	data := [][]byte{}
 	scanner := bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {
-		data = append(data, scanner.Bytes())
+		data = append(data, []byte(scanner.Text()))
 	}
 	m, n := len(data), len(data[0])
 	inBound := func(p coord2d) bool {
